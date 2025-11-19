@@ -263,7 +263,7 @@ const PortfolioSite = () => {
                 <p className="text-lg text-slate-700 mb-6">
                   I'm a passionate developer specializing in creating modern,
                   responsive web and mobile applications. With expertise in
-                  Ionic Angular, React and NodeJs. I build cross-platform
+                  Ionic Angular, React and Node.js. I build cross-platform
                   solutions that deliver exceptional user experiences.
                 </p>
                 <p className="text-lg text-slate-700 mb-6">
