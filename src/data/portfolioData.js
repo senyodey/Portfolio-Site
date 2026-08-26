@@ -1,4 +1,15 @@
-import { Github, Linkedin, Globe, Code2, Smartphone, Monitor } from "lucide-react";
+import {
+  Github,
+  Linkedin,
+  Globe,
+  Code2,
+  Smartphone,
+  Monitor,
+  Search,
+  PenTool,
+  Terminal,
+  Rocket,
+} from "lucide-react";
 
 export const profile = {
   name: "Cleeric Senyo Dey",
@@ -35,6 +46,29 @@ export const services = [
   },
 ];
 
+export const process = [
+  {
+    icon: Search,
+    title: "Discover",
+    desc: "Understand the goal, the users, and what success actually looks like before writing a line of code.",
+  },
+  {
+    icon: PenTool,
+    title: "Design",
+    desc: "Sketch the flow and the interface until the experience feels obvious.",
+  },
+  {
+    icon: Terminal,
+    title: "Develop",
+    desc: "Build it with clean, tested code using whatever the problem actually needs.",
+  },
+  {
+    icon: Rocket,
+    title: "Deploy",
+    desc: "Ship it, monitor it, and keep improving it based on how people actually use it.",
+  },
+];
+
 export const skillGroups = [
   {
     category: "Frontend",
@@ -61,7 +95,7 @@ export const featuredProjects = [
     title: "AfriClass",
     tagline: "Run your school like a modern product team.",
     desc: "The operating system for K-12 schools — admissions, attendance, results, fees and parent communication in one calm, realtime dashboard built for admins, teachers, students and parents.",
-    tech: ["React", "TypeScript", "Redux Toolkit", "Tailwind CSS"],
+    tech: ["React", "TypeScript", "Redux Toolkit", "Tailwind CSS", "Node.js", "PostgreSQL"],
     url: "https://manage.declektech.com",
     accent: "from-blue-500 to-indigo-600",
   },
@@ -69,7 +103,7 @@ export const featuredProjects = [
     title: "Lumi",
     tagline: "Run your shop like the till never lies.",
     desc: "A point-of-sale and inventory SaaS for shops — track every item, order and cedi from the counter to the back room. Built-in AI writes listings, flags odd orders and tells you what to reorder.",
-    tech: ["React", "TypeScript", "Tailwind CSS", "AI"],
+    tech: ["React", "TypeScript", "Tailwind CSS", "Node.js", "PostgreSQL"],
     url: "https://lumi.declektech.com",
     accent: "from-slate-700 to-slate-900",
   },
@@ -77,12 +111,12 @@ export const featuredProjects = [
     title: "BookieSpace",
     tagline: "Learn smarter, not harder.",
     desc: "An e-learning platform for Ghanaian high school students — simulated practicals, an AI tutor and exam-style testing to help students prepare with confidence.",
-    tech: ["React", "KaTeX", "AI Tutor"],
+    tech: ["React", "KaTeX", "node.js", "Tailwind CSS", "postgreSQL"],
     url: "https://bookiespace.com",
     accent: "from-emerald-500 to-teal-600",
   },
   {
-    title: "Declerk Sweets",
+    title: "Declek Sweets",
     tagline: "Fresh baked delights delivered to your door.",
     desc: "An online storefront for a bakery — browse handcrafted pastries, breads and cakes, add to cart, book an event, and order same-day delivery or pickup.",
     tech: ["React", "Tailwind CSS"],
@@ -90,6 +124,27 @@ export const featuredProjects = [
     accent: "from-amber-400 to-orange-500",
   },
 ];
+
+export const testimonials = [
+  {
+    quote:
+      "The custom shop management system genuinely improved our productivity — everything runs a lot smoother now.",
+    name: "Paul Kudzo",
+    role: "Wasco Ventures",
+  },
+  {
+    quote: "AfriClass has been a huge help for our school and staff.",
+    name: "Mrs. Akua Osei",
+    role: "Head of Godswill Academy",
+  },
+  {
+    quote: "The Lumi app put me on another radar entirely.",
+    name: "Amazing",
+    role: "Owner, Amazing Com-Tech",
+  },
+];
+
+export const resumeUrl = "/Cleeric_Dey_Resume.pdf";
 
 export const socialLinks = [
   {

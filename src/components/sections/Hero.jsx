@@ -1,6 +1,6 @@
 import React from "react";
-import { Award } from "lucide-react";
-import { profile, socialLinks } from "../../data/portfolioData";
+import { Award, Download } from "lucide-react";
+import { profile, socialLinks, resumeUrl } from "../../data/portfolioData";
 
 const Hero = ({ setActiveSection }) => {
   return (
@@ -73,6 +73,16 @@ const Hero = ({ setActiveSection }) => {
           >
             Get In Touch
           </button>
+          {resumeUrl && (
+            <a
+              href={resumeUrl}
+              download
+              className="inline-flex items-center gap-2 bg-white dark:bg-slate-800 text-slate-800 dark:text-white border border-slate-200 dark:border-slate-700 px-8 py-3 rounded-lg font-semibold hover:border-amber-400 transform hover:scale-105 transition-all shadow-md"
+            >
+              <Download className="w-4 h-4" />
+              Download CV
+            </a>
+          )}
         </div>
       </div>
     </section>

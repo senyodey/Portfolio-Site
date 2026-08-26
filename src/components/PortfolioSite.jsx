@@ -2,13 +2,22 @@ import React, { useState, useEffect } from "react";
 import Header from "./layout/Header";
 import Footer from "./layout/Footer";
 import Hero from "./sections/Hero";
+import Process from "./sections/Process";
 import About from "./sections/About";
 import Skills from "./sections/Skills";
 import Projects from "./sections/Projects";
+import Testimonials from "./sections/Testimonials";
 import Contact from "./sections/Contact";
 import { profile } from "../data/portfolioData";
 
-const VALID_SECTIONS = ["home", "about", "skills", "projects", "contact"];
+const VALID_SECTIONS = [
+  "home",
+  "about",
+  "skills",
+  "projects",
+  "testimonials",
+  "contact",
+];
 
 const PortfolioSite = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -34,16 +43,23 @@ const PortfolioSite = () => {
   }, []);
 
   useEffect(() => {
-    const handleHashChange = () => {
+    const syncFromLocation = () => {
       const hash = window.location.hash.replace("#", "");
       setActiveSection(VALID_SECTIONS.includes(hash) ? hash : "home");
     };
-    window.addEventListener("hashchange", handleHashChange);
-    return () => window.removeEventListener("hashchange", handleHashChange);
+    window.addEventListener("hashchange", syncFromLocation);
+    window.addEventListener("popstate", syncFromLocation);
+    return () => {
+      window.removeEventListener("hashchange", syncFromLocation);
+      window.removeEventListener("popstate", syncFromLocation);
+    };
   }, []);
 
   useEffect(() => {
-    window.location.hash = activeSection;
+    const currentHash = window.location.hash.replace("#", "");
+    if (currentHash !== activeSection) {
+      window.history.pushState(null, "", `#${activeSection}`);
+    }
   }, [activeSection]);
 
   useEffect(() => {
@@ -72,10 +88,16 @@ const PortfolioSite = () => {
       />
 
       <main className="pt-16">
-        {activeSection === "home" && <Hero setActiveSection={setActiveSection} />}
+        {activeSection === "home" && (
+          <>
+            <Hero setActiveSection={setActiveSection} />
+            <Process />
+          </>
+        )}
         {activeSection === "about" && <About />}
         {activeSection === "skills" && <Skills />}
         {activeSection === "projects" && <Projects />}
+        {activeSection === "testimonials" && <Testimonials />}
         {activeSection === "contact" && <Contact />}
       </main>
 
