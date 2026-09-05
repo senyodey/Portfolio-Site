@@ -1,6 +1,13 @@
 import React from "react";
 import { Award, Download } from "lucide-react";
+import { SiReact, SiTypescript, SiNodedotjs } from "react-icons/si";
 import { profile, socialLinks, resumeUrl } from "../../data/portfolioData";
+
+const orbitIcons = [
+  { Icon: SiReact, color: "text-cyan-500", position: "-top-2 -left-4", delay: "0ms" },
+  { Icon: SiTypescript, color: "text-blue-600", position: "-top-4 right-8", delay: "600ms" },
+  { Icon: SiNodedotjs, color: "text-green-600", position: "bottom-6 -left-6", delay: "1200ms" },
+];
 
 const Hero = ({ setActiveSection }) => {
   return (
@@ -9,7 +16,7 @@ const Hero = ({ setActiveSection }) => {
 
       <div className="max-w-4xl mx-auto text-center">
         <div className="mb-8 relative inline-block animate-scale-in">
-          <div className="w-48 h-48 mx-auto bg-gradient-to-br from-amber-400 to-amber-600 rounded-full p-1 animate-pulse-slow">
+          <div className="w-48 h-48 mx-auto bg-gradient-to-br from-amber-400 to-amber-600 rounded-full p-1">
             <div className="w-full h-full bg-white dark:bg-slate-900 rounded-full flex items-center justify-center">
               <img
                 src="/dey.jpg"
@@ -18,9 +25,19 @@ const Hero = ({ setActiveSection }) => {
               />
             </div>
           </div>
-          <div className="absolute -bottom-2 -right-2 w-16 h-16 bg-slate-800 dark:bg-amber-500 rounded-full flex items-center justify-center animate-bounce-slow">
+          <div className="absolute -bottom-2 -right-2 w-16 h-16 bg-slate-800 dark:bg-amber-500 rounded-full flex items-center justify-center">
             <Award className="w-8 h-8 text-amber-400 dark:text-slate-900" />
           </div>
+
+          {orbitIcons.map(({ Icon, color, position, delay }, idx) => (
+            <div
+              key={idx}
+              style={{ animationDelay: delay }}
+              className={`absolute ${position} w-11 h-11 bg-white dark:bg-slate-800 rounded-full shadow-md border border-slate-200 dark:border-slate-700 flex items-center justify-center animate-bounce-slow`}
+            >
+              <Icon className={`w-5 h-5 ${color}`} />
+            </div>
+          ))}
         </div>
 
         <span
@@ -29,11 +46,11 @@ const Hero = ({ setActiveSection }) => {
           Founder @ Declek Technologies
         </span>
 
-        <h1 className="text-5xl md:text-6xl font-bold text-slate-800 dark:text-white mb-4 animate-slide-up">
-          {profile.role}
+        <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-slate-900 dark:text-white mb-4 max-w-3xl mx-auto animate-slide-up">
+          {profile.headline}
         </h1>
         <p
-          className="text-xl text-slate-600 dark:text-slate-300 mb-8 animate-slide-up max-w-2xl mx-auto"
+          className="text-lg text-slate-500 dark:text-slate-400 mb-8 animate-slide-up max-w-2xl mx-auto"
           style={{ animationDelay: "200ms" }}
         >
           {profile.tagline}
@@ -63,13 +80,13 @@ const Hero = ({ setActiveSection }) => {
         >
           <button
             onClick={() => setActiveSection("projects")}
-            className="bg-gradient-to-r from-amber-500 to-amber-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-amber-600 hover:to-amber-700 transform hover:scale-105 transition-all shadow-lg"
+            className="bg-slate-900 dark:bg-white text-white dark:text-slate-900 px-8 py-3 rounded-lg font-semibold hover:bg-slate-800 dark:hover:bg-slate-100 transition-colors shadow-sm"
           >
             View Projects
           </button>
           <button
             onClick={() => setActiveSection("contact")}
-            className="bg-white dark:bg-slate-800 text-slate-800 dark:text-white border border-slate-200 dark:border-slate-700 px-8 py-3 rounded-lg font-semibold hover:border-amber-400 transform hover:scale-105 transition-all shadow-md"
+            className="text-slate-700 dark:text-slate-300 px-6 py-3 rounded-lg font-medium hover:text-amber-600 dark:hover:text-amber-400 transition-colors"
           >
             Get In Touch
           </button>
@@ -77,7 +94,7 @@ const Hero = ({ setActiveSection }) => {
             <a
               href={resumeUrl}
               download
-              className="inline-flex items-center gap-2 bg-white dark:bg-slate-800 text-slate-800 dark:text-white border border-slate-200 dark:border-slate-700 px-8 py-3 rounded-lg font-semibold hover:border-amber-400 transform hover:scale-105 transition-all shadow-md"
+              className="inline-flex items-center gap-1.5 text-sm text-slate-500 dark:text-slate-400 hover:text-amber-600 dark:hover:text-amber-400 transition-colors"
             >
               <Download className="w-4 h-4" />
               Download CV

@@ -40,7 +40,7 @@ const Testimonials = () => {
             <div
               key={idx}
               style={{ animationDelay: `${idx * 150}ms` }}
-              className="bg-white dark:bg-slate-800 rounded-xl shadow-lg dark:shadow-slate-900/50 p-6 flex flex-col animate-slide-up"
+              className="bg-white dark:bg-slate-800 rounded-xl border border-slate-200/70 dark:border-slate-700/70 shadow-sm p-6 flex flex-col animate-slide-up"
             >
               <Quote className="w-8 h-8 text-amber-400 mb-4" />
               <p className="text-slate-700 dark:text-slate-200 mb-6 flex-1">

@@ -8,7 +8,7 @@ const About = () => {
         <h2 className="text-4xl font-bold text-slate-800 dark:text-white mb-8 text-center animate-slide-down">
           About Me
         </h2>
-        <div className="bg-white dark:bg-slate-800 rounded-xl shadow-lg dark:shadow-slate-900/50 p-8 md:p-12 animate-scale-in">
+        <div className="bg-white dark:bg-slate-800 rounded-xl border border-slate-200/70 dark:border-slate-700/70 shadow-sm p-8 md:p-12 animate-scale-in">
           {profile.bio.map((paragraph, idx) => (
             <p
               key={idx}
@@ -22,7 +22,7 @@ const About = () => {
             {stats.map((stat, idx) => (
               <div
                 key={idx}
-                className="text-center p-4 bg-gradient-to-br from-amber-50 to-slate-50 dark:from-slate-700 dark:to-slate-700/60 rounded-lg transform hover:scale-105 transition-all duration-300 animate-slide-up"
+                className="text-center p-4 bg-gradient-to-br from-amber-50 to-slate-50 dark:from-slate-700 dark:to-slate-700/60 rounded-lg border border-amber-100/60 dark:border-slate-600/40 animate-slide-up"
                 style={{ animationDelay: `${idx * 100}ms` }}
               >
                 <div className="text-3xl font-bold text-amber-600 dark:text-amber-400">
@@ -45,7 +45,7 @@ const About = () => {
               <div
                 key={idx}
                 style={{ animationDelay: `${idx * 100}ms` }}
-                className="bg-white dark:bg-slate-800 rounded-xl shadow-md dark:shadow-slate-900/50 p-6 hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 animate-slide-up"
+                className="bg-white dark:bg-slate-800 rounded-xl border border-slate-200/70 dark:border-slate-700/70 shadow-sm p-6 hover:shadow-md hover:border-amber-300 dark:hover:border-amber-500/40 hover:-translate-y-0.5 transition-all duration-200 animate-slide-up"
               >
                 <div className="w-12 h-12 mb-4 bg-gradient-to-br from-amber-400 to-amber-600 rounded-lg flex items-center justify-center">
                   <service.icon className="w-6 h-6 text-white" />

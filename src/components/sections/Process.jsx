@@ -17,7 +17,7 @@ const Process = () => {
             <div
               key={step.title}
               style={{ animationDelay: `${idx * 150}ms` }}
-              className="relative bg-white dark:bg-slate-800 rounded-xl shadow-md dark:shadow-slate-900/50 p-6 hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 animate-slide-up"
+              className="relative bg-white dark:bg-slate-800 rounded-xl border border-slate-200/70 dark:border-slate-700/70 shadow-sm p-6 hover:shadow-md hover:border-amber-300 dark:hover:border-amber-500/40 hover:-translate-y-0.5 transition-all duration-200 animate-slide-up"
             >
               <span className="absolute top-4 right-4 text-4xl font-bold text-slate-100 dark:text-slate-700 select-none">
                 {String(idx + 1).padStart(2, "0")}

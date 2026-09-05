@@ -21,7 +21,7 @@ const Projects = () => {
               target="_blank"
               rel="noopener noreferrer"
               style={{ animationDelay: `${idx * 150}ms` }}
-              className="group bg-white dark:bg-slate-800 rounded-xl shadow-lg dark:shadow-slate-900/50 overflow-hidden hover:shadow-2xl transform hover:scale-[1.02] transition-all duration-300 animate-slide-up"
+              className="group bg-white dark:bg-slate-800 rounded-xl border border-slate-200/70 dark:border-slate-700/70 shadow-sm overflow-hidden hover:shadow-md hover:border-amber-300 dark:hover:border-amber-500/40 hover:-translate-y-0.5 transition-all duration-200 animate-slide-up"
             >
               <div
                 className={`h-32 bg-gradient-to-br ${project.accent} flex items-center justify-between px-6 relative overflow-hidden`}
@@ -33,12 +33,17 @@ const Projects = () => {
                 <div className="absolute inset-0 bg-gradient-to-br from-transparent to-slate-900/20" />
               </div>
               <div className="p-6">
-                <p className="text-amber-600 dark:text-amber-400 font-medium mb-3 italic">
-                  "{project.tagline}"
+                <p className="text-amber-700 dark:text-amber-400 font-medium mb-3">
+                  {project.tagline}
                 </p>
                 <p className="text-slate-600 dark:text-slate-300 mb-4">
                   {project.desc}
                 </p>
+                {project.decision && (
+                  <p className="text-sm text-slate-500 dark:text-slate-400 mb-4 border-l-2 border-amber-400/60 dark:border-amber-500/40 pl-3">
+                    {project.decision}
+                  </p>
+                )}
                 <div className="flex flex-wrap gap-2">
                   {project.tech.map((t) => (
                     <span

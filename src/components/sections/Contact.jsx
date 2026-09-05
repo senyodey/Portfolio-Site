@@ -16,9 +16,9 @@ const Contact = () => {
           Let's chat on WhatsApp! Click the button below to start a
           conversation.
         </p>
-        <div className="bg-white dark:bg-slate-800 rounded-xl shadow-lg dark:shadow-slate-900/50 p-8 md:p-12 animate-scale-in">
+        <div className="bg-white dark:bg-slate-800 rounded-xl border border-slate-200/70 dark:border-slate-700/70 shadow-sm p-8 md:p-12 animate-scale-in">
           <div className="text-center space-y-6">
-            <div className="w-24 h-24 mx-auto bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center animate-bounce-slow">
+            <div className="w-24 h-24 mx-auto bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center">
               <MessageCircle className="w-12 h-12 text-white" />
             </div>
 
@@ -35,7 +35,7 @@ const Contact = () => {
               href={`https://wa.me/${whatsappNumber}?text=Hi! I found your portfolio and would like to connect.`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center space-x-2 bg-gradient-to-r from-green-500 to-green-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-600 hover:to-green-700 transform hover:scale-105 transition-all shadow-lg"
+              className="inline-flex items-center space-x-2 bg-gradient-to-r from-green-500 to-green-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-600 hover:to-green-700 transition-all shadow-sm"
             >
               <MessageCircle className="w-5 h-5" />
               <span>Chat on WhatsApp</span>

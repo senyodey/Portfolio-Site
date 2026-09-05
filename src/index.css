@@ -95,3 +95,15 @@ body {
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     sans-serif;
 }
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-in,
+  .animate-slide-down,
+  .animate-slide-up,
+  .animate-slide-right,
+  .animate-scale-in,
+  .animate-bounce-slow,
+  .animate-pulse-slow {
+    animation: none !important;
+  }
+}

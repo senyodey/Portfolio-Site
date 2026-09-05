@@ -45,10 +45,10 @@ const Header = ({
               <button
                 key={item.id}
                 onClick={() => setActiveSection(item.id)}
-                className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
+                className={`px-4 py-2 rounded-lg font-medium transition-colors duration-200 ${
                   activeSection === item.id
-                    ? "text-amber-600 bg-gradient-to-r from-amber-50 to-amber-100 dark:from-amber-500/10 dark:to-amber-500/20 dark:text-amber-400 shadow-md transform scale-105"
-                    : "text-slate-700 dark:text-slate-300 hover:text-amber-600 dark:hover:text-amber-400 hover:bg-slate-50 dark:hover:bg-slate-800 hover:scale-105"
+                    ? "text-amber-600 bg-amber-50 dark:bg-amber-500/10 dark:text-amber-400"
+                    : "text-slate-700 dark:text-slate-300 hover:text-amber-600 dark:hover:text-amber-400 hover:bg-slate-50 dark:hover:bg-slate-800"
                 }`}
               >
                 {item.label}

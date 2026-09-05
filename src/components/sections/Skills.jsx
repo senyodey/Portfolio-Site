@@ -20,12 +20,12 @@ const Skills = () => {
                   <div
                     key={idx}
                     style={{ animationDelay: `${(gIdx * 4 + idx) * 100}ms` }}
-                    className="bg-white dark:bg-slate-800 rounded-xl shadow-md dark:shadow-slate-900/50 p-6 text-center hover:shadow-2xl transform hover:scale-110 hover:-rotate-2 transition-all duration-300 cursor-pointer animate-scale-in"
+                    className="bg-white dark:bg-slate-800 rounded-xl border border-slate-200/70 dark:border-slate-700/70 shadow-sm p-6 text-center hover:shadow-md hover:border-amber-300 dark:hover:border-amber-500/40 hover:-translate-y-0.5 transition-all duration-200 animate-scale-in"
                   >
                     <div
-                      className={`w-16 h-16 mx-auto mb-4 bg-gradient-to-br ${skill.color} rounded-full flex items-center justify-center text-2xl font-bold text-white shadow-lg`}
+                      className={`w-16 h-16 mx-auto mb-4 bg-gradient-to-br ${skill.color} rounded-full flex items-center justify-center shadow-sm`}
                     >
-                      {skill.icon}
+                      <skill.icon className={`w-7 h-7 ${skill.iconClass || "text-white"}`} />
                     </div>
                     <p className="text-slate-700 dark:text-slate-200 font-semibold text-lg">
                       {skill.name}

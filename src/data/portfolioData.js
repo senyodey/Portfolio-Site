@@ -10,11 +10,22 @@ import {
   Terminal,
   Rocket,
 } from "lucide-react";
+import {
+  SiReact,
+  SiAngular,
+  SiTypescript,
+  SiJavascript,
+  SiHtml5,
+  SiCss,
+  SiIonic,
+  SiNodedotjs,
+} from "react-icons/si";
 
 export const profile = {
   name: "Cleeric Senyo Dey",
-  role: "Full Stack Developer",
-  tagline: "Building production software for schools, shops and students across Ghana",
+  role: "Full-Stack Engineer",
+  headline: "I build production software that schools, shops and students actually rely on.",
+  tagline: "Full-Stack Engineer · React · Node.js · TypeScript · Tailwind CSS",
   bio: [
     "I'm a passionate developer specializing in creating modern, responsive web and mobile applications. With expertise in Ionic, Angular, React and Node.js, I build cross-platform solutions that deliver exceptional user experiences.",
     "Through Declek Technologies, I design and ship SaaS products end-to-end — from the first line of code to the people actually using them every day.",
@@ -73,19 +84,19 @@ export const skillGroups = [
   {
     category: "Frontend",
     skills: [
-      { name: "React", icon: "⚛️", color: "from-cyan-500 to-cyan-600" },
-      { name: "Angular", icon: "🅰️", color: "from-red-500 to-red-600" },
-      { name: "TypeScript", icon: "TS", color: "from-blue-600 to-blue-700" },
-      { name: "JavaScript", icon: "JS", color: "from-yellow-500 to-yellow-600" },
-      { name: "HTML5", icon: "🌐", color: "from-orange-500 to-orange-600" },
-      { name: "CSS3", icon: "🎨", color: "from-blue-500 to-blue-600" },
+      { name: "React", icon: SiReact, color: "from-cyan-500 to-cyan-600" },
+      { name: "Angular", icon: SiAngular, color: "from-red-500 to-red-600" },
+      { name: "TypeScript", icon: SiTypescript, color: "from-blue-600 to-blue-700" },
+      { name: "JavaScript", icon: SiJavascript, color: "from-yellow-400 to-yellow-500", iconClass: "text-slate-900" },
+      { name: "HTML5", icon: SiHtml5, color: "from-orange-500 to-orange-600" },
+      { name: "CSS3", icon: SiCss, color: "from-blue-500 to-blue-600" },
     ],
   },
   {
     category: "Mobile & Backend",
     skills: [
-      { name: "Ionic", icon: "⚡", color: "from-blue-500 to-blue-600" },
-      { name: "Node.js", icon: "🟢", color: "from-green-500 to-green-600" },
+      { name: "Ionic", icon: SiIonic, color: "from-blue-500 to-blue-600" },
+      { name: "Node.js", icon: SiNodedotjs, color: "from-green-500 to-green-600" },
     ],
   },
 ];
@@ -95,6 +106,7 @@ export const featuredProjects = [
     title: "AfriClass",
     tagline: "Run your school like a modern product team.",
     desc: "The operating system for K-12 schools — admissions, attendance, results, fees and parent communication in one calm, realtime dashboard built for admins, teachers, students and parents.",
+    decision: "One realtime dashboard serving four different roles — admins, teachers, students, parents — off a single schema, built to replace the spreadsheets and paper registers schools were running on before.",
     tech: ["React", "TypeScript", "Redux Toolkit", "Tailwind CSS", "Node.js", "PostgreSQL"],
     url: "https://manage.declektech.com",
     accent: "from-blue-500 to-indigo-600",
@@ -103,6 +115,7 @@ export const featuredProjects = [
     title: "Lumi",
     tagline: "Run your shop like the till never lies.",
     desc: "A point-of-sale and inventory SaaS for shops — track every item, order and cedi from the counter to the back room. Built-in AI writes listings, flags odd orders and tells you what to reorder.",
+    decision: "AI layer reads off the same POS data used for daily till operations, so anomaly flags and reorder suggestions come without a separate analytics pipeline to maintain.",
     tech: ["React", "TypeScript", "Tailwind CSS", "Node.js", "PostgreSQL"],
     url: "https://lumi.declektech.com",
     accent: "from-slate-700 to-slate-900",
@@ -111,7 +124,8 @@ export const featuredProjects = [
     title: "BookieSpace",
     tagline: "Learn smarter, not harder.",
     desc: "An e-learning platform for Ghanaian high school students — simulated practicals, an AI tutor and exam-style testing to help students prepare with confidence.",
-    tech: ["React", "KaTeX", "node.js", "Tailwind CSS", "postgreSQL"],
+    decision: "Exam content renders with KaTeX and simulated practicals run client-side, keeping the experience usable on the low-bandwidth connections most students are on.",
+    tech: ["React", "KaTeX", "Node.js", "Tailwind CSS", "PostgreSQL"],
     url: "https://bookiespace.com",
     accent: "from-emerald-500 to-teal-600",
   },
@@ -119,6 +133,7 @@ export const featuredProjects = [
     title: "Declek Sweets",
     tagline: "Fresh baked delights delivered to your door.",
     desc: "An online storefront for a bakery — browse handcrafted pastries, breads and cakes, add to cart, book an event, and order same-day delivery or pickup.",
+    decision: "Deliberately backend-light — a static React + Tailwind storefront, built to get a small bakery's online ordering live in days, not weeks.",
     tech: ["React", "Tailwind CSS"],
     url: "https://declerksweets.netlify.app",
     accent: "from-amber-400 to-orange-500",
