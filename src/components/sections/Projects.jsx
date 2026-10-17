@@ -1,6 +1,6 @@
 import React from "react";
 import { ExternalLink } from "lucide-react";
-import { featuredProjects, whatsappNumber } from "../../data/portfolioData";
+import { featuredProjects, whatsappLink } from "../../data/portfolioData";
 
 const Projects = () => {
   return (
@@ -16,7 +16,7 @@ const Projects = () => {
         <div className="grid md:grid-cols-2 gap-6">
           {featuredProjects.map((project, idx) => (
             <a
-              key={idx}
+              key={project.title}
               href={project.url}
               target="_blank"
               rel="noopener noreferrer"
@@ -29,7 +29,7 @@ const Projects = () => {
                 <span className="text-2xl font-bold text-white z-10">
                   {project.title}
                 </span>
-                <ExternalLink className="w-5 h-5 text-white/80 group-hover:text-white z-10 transition-colors" />
+                <ExternalLink aria-hidden="true" className="w-5 h-5 text-white/80 group-hover:text-white z-10 transition-colors" />
                 <div className="absolute inset-0 bg-gradient-to-br from-transparent to-slate-900/20" />
               </div>
               <div className="p-6">
@@ -64,7 +64,7 @@ const Projects = () => {
             More projects available on request
           </p>
           <a
-            href={`https://wa.me/${whatsappNumber}?text=Hi! I'd like to see more of your work.`}
+            href={whatsappLink("Hi! I'd like to see more of your work.")}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center bg-slate-800 dark:bg-slate-700 text-white px-6 py-3 rounded-lg font-semibold hover:bg-slate-700 dark:hover:bg-slate-600 transform hover:scale-105 transition-all shadow-md"

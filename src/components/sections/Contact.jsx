@@ -1,6 +1,7 @@
 import React from "react";
 import { MessageCircle } from "lucide-react";
-import { socialLinks, whatsappNumber } from "../../data/portfolioData";
+import SocialLinks from "../common/SocialLinks";
+import { whatsappLink } from "../../data/portfolioData";
 
 const Contact = () => {
   return (
@@ -19,7 +20,7 @@ const Contact = () => {
         <div className="bg-white dark:bg-slate-800 rounded-xl border border-slate-200/70 dark:border-slate-700/70 shadow-sm p-8 md:p-12 animate-scale-in">
           <div className="text-center space-y-6">
             <div className="w-24 h-24 mx-auto bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center">
-              <MessageCircle className="w-12 h-12 text-white" />
+              <MessageCircle className="w-12 h-12 text-white" aria-hidden="true" />
             </div>
 
             <h3 className="text-2xl font-bold text-slate-800 dark:text-white">
@@ -32,12 +33,12 @@ const Contact = () => {
             </p>
 
             <a
-              href={`https://wa.me/${whatsappNumber}?text=Hi! I found your portfolio and would like to connect.`}
+              href={whatsappLink("Hi! I found your portfolio and would like to connect.")}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center space-x-2 bg-gradient-to-r from-green-500 to-green-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-600 hover:to-green-700 transition-all shadow-sm"
             >
-              <MessageCircle className="w-5 h-5" />
+              <MessageCircle className="w-5 h-5" aria-hidden="true" />
               <span>Chat on WhatsApp</span>
             </a>
 
@@ -45,20 +46,7 @@ const Contact = () => {
               <p className="text-slate-600 dark:text-slate-300 mb-4">
                 Or connect with me on:
               </p>
-              <div className="flex justify-center space-x-4">
-                {socialLinks.map((social, idx) => (
-                  <a
-                    key={idx}
-                    href={social.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`p-3 bg-slate-800 dark:bg-slate-700 text-white rounded-full transition-all duration-300 transform hover:scale-110 ${social.color}`}
-                    title={social.label}
-                  >
-                    <social.icon className="w-5 h-5" />
-                  </a>
-                ))}
-              </div>
+              <SocialLinks />
             </div>
           </div>
         </div>

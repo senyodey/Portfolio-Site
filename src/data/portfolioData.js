@@ -57,7 +57,7 @@ export const services = [
   },
 ];
 
-export const process = [
+export const processSteps = [
   {
     icon: Search,
     title: "Discover",
@@ -159,7 +159,11 @@ export const testimonials = [
   },
 ];
 
-export const resumeUrl = "/Cleeric_Dey_Resume.pdf";
+const asset = (path) => `${process.env.PUBLIC_URL}/${path}`;
+
+export const profileImage = asset("dey.jpg");
+
+export const resumeUrl = asset("Cleeric_Dey_Resume.pdf");
 
 export const socialLinks = [
   {
@@ -183,3 +187,6 @@ export const socialLinks = [
 ];
 
 export const whatsappNumber = "233248977347";
+
+export const whatsappLink = (message) =>
+  `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;

@@ -1,13 +1,8 @@
 import React from "react";
 import PortfolioSite from "./components/PortfolioSite";
 
-
 function App() {
-  return (
-    <>
-      <PortfolioSite />
-    </>
-  );
+  return <PortfolioSite />;
 }
 
 export default App;

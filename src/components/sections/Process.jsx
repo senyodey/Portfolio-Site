@@ -1,5 +1,5 @@
 import React from "react";
-import { process } from "../../data/portfolioData";
+import { processSteps } from "../../data/portfolioData";
 
 const Process = () => {
   return (
@@ -13,13 +13,13 @@ const Process = () => {
         </p>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {process.map((step, idx) => (
+          {processSteps.map((step, idx) => (
             <div
               key={step.title}
               style={{ animationDelay: `${idx * 150}ms` }}
               className="relative bg-white dark:bg-slate-800 rounded-xl border border-slate-200/70 dark:border-slate-700/70 shadow-sm p-6 hover:shadow-md hover:border-amber-300 dark:hover:border-amber-500/40 hover:-translate-y-0.5 transition-all duration-200 animate-slide-up"
             >
-              <span className="absolute top-4 right-4 text-4xl font-bold text-slate-100 dark:text-slate-700 select-none">
+              <span aria-hidden="true" className="absolute top-4 right-4 text-4xl font-bold text-slate-100 dark:text-slate-700 select-none">
                 {String(idx + 1).padStart(2, "0")}
               </span>
               <div className="w-12 h-12 mb-4 bg-gradient-to-br from-amber-400 to-amber-600 rounded-lg flex items-center justify-center relative z-10">
