@@ -9,6 +9,7 @@ import {
   PenTool,
   Terminal,
   Rocket,
+  TestTubeDiagonal,
 } from "lucide-react";
 import {
   SiReact,
@@ -19,15 +20,17 @@ import {
   SiCss,
   SiIonic,
   SiNodedotjs,
+  SiExpress,
+  SiPostgresql,
 } from "react-icons/si";
 
 export const profile = {
   name: "Cleeric Senyo Dey",
   role: "Full-Stack Engineer",
-  headline: "I build production software that schools, shops and students actually rely on.",
-  tagline: "Full-Stack Engineer · React · Node.js · TypeScript · Tailwind CSS",
+  headline: "Hi, I'm Cleeric — I build web and mobile apps, end to end.",
+  tagline: "Full-Stack Engineer working across React, React Native, Node.js, Express and PostgreSQL — from the database to the interface people use every day.",
   bio: [
-    "I'm a passionate developer specializing in creating modern, responsive web and mobile applications. With expertise in Ionic, Angular, React and Node.js, I build cross-platform solutions that deliver exceptional user experiences.",
+    "I'm a passionate developer specializing in creating modern, responsive web and mobile applications. With expertise in React, React Native, Angular, Ionic, Node.js, Express and PostgreSQL, I build cross-platform solutions that deliver exceptional user experiences.",
     "Through Declek Technologies, I design and ship SaaS products end-to-end — from the first line of code to the people actually using them every day.",
   ],
 };
@@ -48,7 +51,7 @@ export const services = [
   {
     icon: Smartphone,
     title: "Mobile Development",
-    desc: "Cross-platform mobile apps with Ionic and Angular that feel native.",
+    desc: "Cross-platform mobile apps with React Native and Ionic that feel native.",
   },
   {
     icon: Monitor,
@@ -93,10 +96,24 @@ export const skillGroups = [
     ],
   },
   {
-    category: "Mobile & Backend",
+    category: "Mobile",
     skills: [
+      { name: "React Native", icon: SiReact, color: "from-sky-500 to-indigo-600" },
       { name: "Ionic", icon: SiIonic, color: "from-blue-500 to-blue-600" },
+    ],
+  },
+  {
+    category: "Backend & Data",
+    skills: [
       { name: "Node.js", icon: SiNodedotjs, color: "from-green-500 to-green-600" },
+      { name: "Express", icon: SiExpress, color: "from-slate-700 to-slate-900" },
+      { name: "PostgreSQL", icon: SiPostgresql, color: "from-sky-600 to-blue-800" },
+    ],
+  },
+  {
+    category: "Testing",
+    skills: [
+      { name: "Playwright", icon: TestTubeDiagonal, color: "from-emerald-500 to-green-700" },
     ],
   },
 ];
